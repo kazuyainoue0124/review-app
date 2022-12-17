@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
@@ -24,9 +23,6 @@ const Header = (props) => {
         >
           {title}
         </Typography>
-        {/* <IconButton>
-          <SearchIcon />
-        </IconButton> */}
         <Button variant="outlined" size="middle" component={Link} to="/login">
           <LoginIcon sx={{ mr: 1 }} />
           ログイン

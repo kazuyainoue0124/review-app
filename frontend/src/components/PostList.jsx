@@ -6,8 +6,7 @@ import Card from "@mui/material/Card";
 import CardActionArea from "@mui/material/CardActionArea";
 import CardContent from "@mui/material/CardContent";
 
-const PostList = (props) => {
-  const { post } = props;
+const PostList = () => {
   return (
     <Grid item xs={12} md={8}>
       <CardActionArea component="a" href="#">
