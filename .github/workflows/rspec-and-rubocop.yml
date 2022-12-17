@@ -1,7 +1,6 @@
 name: Run rspec, rubocop-rails
 
 on:
-  push:
   pull_request:
 
 jobs:
@@ -17,6 +16,9 @@ jobs:
 
       - name: docker-compose up -d
         run: docker-compose up -d
+
+      - name: sleep for waiting launch db
+        run: sleep 1
 
       - name: setup db
         run: docker-compose run --rm backend rails db:create db:migrate
