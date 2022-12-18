@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   describe 'ユーザーモデルのバリデーションチェック' do
     context 'データが有効な場合' do
-      it '名前とメールアドレスが存在する' do
+      it '名前とメールアドレス、パスワードが存在する' do
         user = create(:user, user_name: '山田太郎', email: 'taro@example.com', password: 'password', password_confirmation: 'password')
         expect(user).to be_valid
       end
