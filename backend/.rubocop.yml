@@ -74,3 +74,8 @@ Metrics/MethodLength:
 Metrics/BlockLength:
   Exclude:
     - 'spec/**/*'
+
+# Rubocopはコンパクト記法ではなくネスト記法を推奨
+Style/ClassAndModuleChildren:
+  Exclude:
+    - 'app/controllers/api/v1/*'

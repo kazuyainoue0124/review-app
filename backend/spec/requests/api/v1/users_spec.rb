@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe "Api::V1::Users", type: :request do
-  describe "ユーザーを新規登録する" do
-    it "成功する場合" do
+RSpec.describe 'Api::V1::Users', type: :request do
+  describe 'ユーザーを新規登録する' do
+    it '成功する場合' do
       user_params = { user_name: '山田太郎', email: 'taro@example.com', password: 'password', password_confirmation: 'password' }
 
       # データの作成を確認
@@ -17,5 +17,4 @@ RSpec.describe "Api::V1::Users", type: :request do
       expect(json['user']['email']).to eq('taro@example.com')
     end
   end
-
 end
