@@ -13,8 +13,10 @@ RSpec.describe 'Api::V1::Users', type: :request do
       expect(response.status).to eq(200)
 
       # 登録したユーザーのデータを返すことを確認
-      expect(json['user']['user_name']).to eq('山田太郎')
-      expect(json['user']['email']).to eq('taro@example.com')
+      expect(json['user']['id']).to eq(current_user.id)
+      expect(json['user']['user_name']).to eq(current_user.user_name)
+      expect(json['user']['email']).to eq(current_user.email)
+      expect(json['user']['password_digest']).to eq(current_user.password_digest)
     end
   end
 end
